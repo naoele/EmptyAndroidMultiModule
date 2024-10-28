@@ -1,10 +1,11 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    namespace = libs.versions.appCoreNameSpace.get() + ".data"
+    namespace = libs.versions.appCoreNameSpace.get() + ".network"
     compileSdk = libs.versions.appCompileSdk.get().toInt()
 
     defaultConfig {
@@ -35,12 +36,11 @@ android {
 
 dependencies {
 
-    api(project(":core:common"))
-    api(project(":core:datastore"))
-    api(project(":core:db"))
-    api(project(":core:network"))
+    implementation(project(":core:common"))
 
+    implementation(libs.kotlinx.datetime)
     implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit)
     testImplementation(libs.androidx.test.ext)
@@ -50,4 +50,5 @@ dependencies {
     testImplementation(libs.turbine)
     testImplementation(libs.kotlin.test)
     testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.kotlinx.serialization.json)
 }
