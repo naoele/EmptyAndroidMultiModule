@@ -1,4 +1,4 @@
-package jp.co.alc.boco
+package jp.co.alc.booco
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package jp.co.alc.boco.ui.theme
+package jp.co.alc.booco.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
