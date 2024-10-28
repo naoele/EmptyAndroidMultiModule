@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = libs.versions.appCoreNameSpace.get() + ".data"
+    namespace = libs.versions.appCoreNameSpace.get() + ".datastore"
     compileSdk = libs.versions.appCompileSdk.get().toInt()
 
     defaultConfig {
@@ -36,10 +36,13 @@ android {
 
 dependencies {
 
-    api(project(":core:common"))
-    api(project(":core:datastore"))
+    implementation(project(":core:common"))
+
+    api(libs.androidx.dataStore.core)
+    api(libs.androidx.dataStore)
 
     implementation(libs.androidx.core.ktx)
+    implementation(libs.kotlinx.datetime)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.serialization.json)
 
