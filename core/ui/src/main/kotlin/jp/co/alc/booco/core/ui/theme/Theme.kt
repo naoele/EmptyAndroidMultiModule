@@ -1,4 +1,4 @@
-package jp.co.alc.booco.ui.theme
+package jp.co.alc.booco.core.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
