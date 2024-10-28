@@ -41,6 +41,8 @@ android {
 
 dependencies {
 
+    implementation(project(":core:common"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
@@ -69,5 +71,4 @@ dependencies {
     androidTestImplementation(libs.androidx.lifecycle.runtime.testing)
 
     debugImplementation(libs.androidx.compose.ui.tooling)
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
 }
