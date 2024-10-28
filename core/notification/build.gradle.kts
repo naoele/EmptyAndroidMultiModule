@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = libs.versions.appCoreNameSpace.get() + ".domain"
+    namespace = libs.versions.appCoreNameSpace.get() + ".notification"
     compileSdk = libs.versions.appCompileSdk.get().toInt()
 
     defaultConfig {
@@ -36,7 +36,18 @@ android {
 dependencies {
 
     implementation(project(":core:common"))
-    implementation(project(":core:data"))
+
+    implementation(libs.androidx.core.ktx)
 
     testImplementation(libs.junit)
+    testImplementation(libs.androidx.test.ext)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.mockk)
+    testImplementation(libs.truth)
+    testImplementation(libs.turbine)
+    testImplementation(libs.kotlin.test)
+    testImplementation(libs.kotlinx.coroutines.test)
+
+    androidTestImplementation(libs.androidx.test.ext)
+    androidTestImplementation(libs.androidx.test.espresso.core)
 }
