@@ -23,6 +23,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "Sample01"
 include(":app")
+include(":core:analytics")
 include(":core:common")
 include(":core:data")
 include(":core:datastore")
