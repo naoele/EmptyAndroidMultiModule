@@ -1,4 +1,4 @@
-package jp.co.alc.booco.core.data.dao
+package jp.co.alc.booco.core.db.dao
 
 import jp.co.alc.booco.core.db.table.MDBBook
 import kotlinx.coroutines.flow.Flow

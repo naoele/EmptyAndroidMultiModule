@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = libs.versions.appCoreNameSpace.get() + ".datastore"
+    namespace = libs.versions.appCoreNameSpace.get() + ".db"
     compileSdk = libs.versions.appCompileSdk.get().toInt()
 
     defaultConfig {
@@ -38,18 +38,17 @@ dependencies {
 
     implementation(project(":core:common"))
 
-    api(libs.androidx.dataStore.core)
-    api(libs.androidx.dataStore)
+    implementation(libs.kotlinx.datetime)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit)
-    testImplementation(libs.androidx.test.core)
     testImplementation(libs.androidx.test.ext)
     testImplementation(libs.robolectric)
     testImplementation(libs.mockk)
     testImplementation(libs.truth)
     testImplementation(libs.turbine)
     testImplementation(libs.kotlin.test)
-
-    androidTestImplementation(libs.androidx.test.ext)
-    androidTestImplementation(libs.androidx.test.espresso.core)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.kotlinx.serialization.json)
 }

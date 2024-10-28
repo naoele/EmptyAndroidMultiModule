@@ -7,7 +7,7 @@ import app.cash.turbine.test
 import com.google.common.truth.Truth
 import io.mockk.mockk
 import jp.co.alc.booco.core.data.Database
-import jp.co.alc.booco.core.data.table.MDBBook
+import jp.co.alc.booco.core.db.table.MDBBook
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.runTest
 import org.junit.Before

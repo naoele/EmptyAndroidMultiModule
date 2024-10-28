@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -38,13 +37,11 @@ dependencies {
 
     api(project(":core:common"))
     api(project(":core:datastore"))
+    api(project(":core:db"))
 
-    implementation(libs.androidx.core.ktx)
     implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit)
-    testImplementation(libs.androidx.test.core)
     testImplementation(libs.androidx.test.ext)
     testImplementation(libs.robolectric)
     testImplementation(libs.mockk)
@@ -52,8 +49,4 @@ dependencies {
     testImplementation(libs.turbine)
     testImplementation(libs.kotlin.test)
     testImplementation(libs.kotlinx.coroutines.test)
-    testImplementation(libs.kotlinx.serialization.json)
-
-    androidTestImplementation(libs.androidx.test.ext)
-    androidTestImplementation(libs.androidx.test.espresso.core)
 }
