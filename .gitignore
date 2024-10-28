@@ -249,3 +249,6 @@ sentry.properties
 
 # Crowdin
 crowdin.yml
+
+# Kotlin
+.kotlin
